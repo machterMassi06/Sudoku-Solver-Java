@@ -3,10 +3,8 @@
 == Project Goal
 Create a https://fr.wikipedia.org/wiki/Sudoku[Sudoku] solver in Java using the backtracking method.
 
-The program should:
-- Read the puzzle from a `test.txt` file or from user input.
-- Use a backtracking algorithm to solve the Sudoku puzzle.
-- Show the solution if it exists, or indicate that there is no solution.
+The program should:Read the puzzle from a `test.txt` file or from user input.Use a backtracking algorithm to solve the Sudoku puzzle.
+Show the solution if it exists, or indicate that there is no solution.
 
 == Requirements
 - Java 11 or later
@@ -14,26 +12,108 @@ The program should:
 
 == How to Run
 1. **Clone the repository**:
-    ```
+```
     git https://github.com/machterMassi06/Sudoku-Solver-Java
     cd SudokuSolver
-    ```
+```
 
 2. **Compile the Java files**:
-    ```bash
+```bash
     cd src
-    javac SudokuSolver.java
-    ```
+    javac Main.java
+```
 
 3. **Run the program**:
-    - To run with a file input:
-      ```bash
-      java SudokuSolver f test.txt
-      ```
-    - To run with user input:
-      ```bash
-      java SudokuSolver m
-      ```
+    - To run with a file input(mode "f" + "pathSourceFile"), Example:
+```bash
+      java Main f test.txt
+```
+    - Output:
+```bash
+welcome to Suduko puzzle solver :)
 
+Readline puzzle from :test.txt
+Initial Puzzle:
+
+5 3 . | . 7 . | . . .
+6 . . | 1 9 5 | . . .
+. 9 8 | . . . | . 6 .
+-------------------
+8 . . | . 6 . | . . 3
+4 . . | 8 . 3 | . . 1
+7 . . | . 2 . | . . 6
+-------------------
+. 6 . | . . . | 2 8 .
+. . . | 4 1 9 | . . 5
+. . . | . 8 . | . 7 9
+
+Solution found:
+
+5 3 4 | 6 7 8 | 9 1 2
+6 7 2 | 1 9 5 | 3 4 8
+1 9 8 | 3 4 2 | 5 6 7
+-------------------
+8 5 9 | 7 6 1 | 4 2 3
+7 1 3 | 9 2 4 | 8 5 6
+-------------------
+9 6 1 | 5 3 7 | 2 8 4
+2 8 7 | 4 1 9 | 6 3 5
+3 4 5 | 2 8 6 | 1 7 9
+
+```
+    - To run with user input(mode "m") , Example:
+```bash
+      java M m
+
+welcome to Suduko puzzle solver :)
+
+Manual mode selected
+Enter the 9 lines of the Sudoku puzzle separated by " "
+(use 0 for empty boxes):
+
+8 0 0 0 0 0 0 0 0
+0 0 3 6 0 0 0 0 0
+0 7 0 0 9 0 2 0 0
+0 5 0 0 0 7 0 0 0
+0 0 0 0 4 5 3 0 0
+0 0 0 1 0 0 0 6 0
+0 0 0 0 0 0 0 0 5
+0 0 0 0 0 0 0 0 0
+0 0 0 8 0 0 0 7 9
+
+```
+
+    - Output:
+```bash
+
+Initial Puzzle:
+
+8 . . | . . . | . . .
+. . 3 | 6 . . | . . .
+. 7 . | . 9 . | 2 . .
+-------------------
+. 5 . | . . 7 | . . .
+. . . | . 4 5 | 3 . .
+. . . | 1 . . | . 6 .
+-------------------
+. . . | . . . | . . 5
+. . . | . . . | . . .
+. . . | 8 . . | . 7 9
+
+Solution found:
+
+8 1 2 | 3 7 4 | 9 5 6
+5 9 3 | 6 1 2 | 7 4 8
+4 7 6 | 5 9 8 | 2 1 3
+-------------------
+3 5 1 | 2 6 7 | 8 9 4
+6 8 7 | 9 4 5 | 3 2 1
+2 4 9 | 1 8 3 | 5 6 7
+-------------------
+7 6 8 | 4 2 9 | 1 3 5
+9 3 4 | 7 5 1 | 6 8 2
+1 2 5 | 8 3 6 | 4 7 9
+
+```
 
 
