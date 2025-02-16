@@ -1,0 +1,39 @@
+= SudokuSolver
+
+== Project Goal
+Create a https://fr.wikipedia.org/wiki/Sudoku[Sudoku] solver in Java using the backtracking method.
+
+The program should:
+- Read the puzzle from a `test.txt` file or from user input.
+- Use a backtracking algorithm to solve the Sudoku puzzle.
+- Show the solution if it exists, or indicate that there is no solution.
+
+== Requirements
+- Java 11 or later
+- Text file (example :`src/test.txt`) formatted in a 9x9 grid, where 0 represents an empty cell.
+
+== How to Run
+1. **Clone the repository**:
+    ```
+    git https://github.com/machterMassi06/Sudoku-Solver-Java
+    cd SudokuSolver
+    ```
+
+2. **Compile the Java files**:
+    ```bash
+    cd src
+    javac SudokuSolver.java
+    ```
+
+3. **Run the program**:
+    - To run with a file input:
+      ```bash
+      java SudokuSolver f test.txt
+      ```
+    - To run with user input:
+      ```bash
+      java SudokuSolver m
+      ```
+
+
+
