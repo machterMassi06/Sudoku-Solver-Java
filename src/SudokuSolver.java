@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SudokuSolver {
     private static final int SIZE=9;
 
@@ -44,5 +46,22 @@ public class SudokuSolver {
             }
         }
         return true;
+    }
+
+    //show grid
+    public static void show(int[][] puzzle){
+        String sep = "-".repeat(SIZE * 2 + 1);
+        for(int r=0;r<SIZE;r++){
+            if (r%3==0 && r!=0){
+                System.out.println(sep);
+            }
+            for(int c=0;c<SIZE;c++){
+                if (c% 3 == 0 && c!= 0) {
+                    System.out.print("| ");
+                }
+                System.out.print(puzzle[r][c] == 0 ? ". " : puzzle[r][c] + " ");
+            }
+            System.out.println();
+        }
     }
 }
