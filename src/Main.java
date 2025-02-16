@@ -1,4 +1,6 @@
 import utils.*;
+
+import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -20,10 +22,21 @@ public class Main {
                 //Manual mode
                 System.out.println("Manual mode selected ");
                 puzzle=StandardInput.readFromUser(scanner);
-            }else{
-                System.out.println("Invalid arguments , use <java Main 'f <filePath>' OR 'm'>");
-                System.exit(1);
             }
+
+            System.out.println("Initial Puzzle: ");
+            SudokuSolver.show(puzzle);
+
+            if (SudokuSolver.solve(puzzle)){
+                System.out.println("Solution found:");
+                SudokuSolver.show(puzzle);
+            }else{
+                System.out.println("There is no possible solution to this puzzle.");
+            }
+
+        }else{
+            System.out.println("Invalid arguments , use <java Main 'f <filePath>' OR 'm'>");
+            System.exit(1);
         }
 
     }
