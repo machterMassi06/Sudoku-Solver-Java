@@ -63,8 +63,9 @@ Solution found:
 ```
     - To run with user input(mode "m") , Example:
 ```bash
-      java M m
-
+      java Main m
+```
+```bash
 welcome to Suduko puzzle solver :)
 
 Manual mode selected
