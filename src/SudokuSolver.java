@@ -4,17 +4,26 @@ public class SudokuSolver {
     //backtracking resolution
     public static boolean solve(int[][] puzzle){
         for(int r=0;r<SIZE;r++){
-            for (c=0;c<SIZE;c++){
+            for (int c=0;c<SIZE;c++){
                 // find the next empty box
                 if(puzzle[r][c]==0){
                     for(int n=1;n<=SIZE;n++){
                         if (isSafe(puzzle,r,c,n)){
-                            // not implemented yet
+                            puzzle[r][c]=n;
+
+                            if (solve(puzzle)){
+                                return true;
+                            }
+                            //else ,backtrack
+                            puzzle[r][c]=0;
                         }
                     }
+                    //if no solution found
+                    return false;
                 }
             }
         }
+        return true;
     }
 
     // Check if a number can be placed in a box
