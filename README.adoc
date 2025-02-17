@@ -11,19 +11,18 @@ Show the solution if it exists, or indicate that there is no solution.
 - Text file (example :`src/test.txt`) formatted in a 9x9 grid, where 0 represents an empty cell.
 
 == How to Run
-1. **Clone the repository**:
+ **Clone the repository**:
 ```
     git https://github.com/machterMassi06/Sudoku-Solver-Java
     cd SudokuSolver
 ```
-
-2. **Compile the Java files**:
+ **Compile the Java files**:
 ```bash
     cd src
     javac Main.java
 ```
 
-3. **Run the program**:
+ **Run the program**:
     - To run with a file input(mode "f" + "pathSourceFile"), Example:
 ```bash
       java Main f test.txt
